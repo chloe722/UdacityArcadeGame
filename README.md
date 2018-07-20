@@ -11,3 +11,6 @@ Frontend-NanoDegree Arcade Game
 Control the player by pressing up, down, left and right keyboards
 
 Avoid the bugs and reach the river to win the game :)
+
+
+![in-game screenShot](images/arcadeGame.png)
