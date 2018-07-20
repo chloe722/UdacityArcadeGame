@@ -15,14 +15,14 @@ class Enemy{
     update(dt){
         this.x = (this.x + this.speed * dt);
         if(this.x > 450){
-            this.x = -50;
-            this.y = getRandomItem(enemyPosY);
-            this.speed = 200 * Math.random() + 100;
+            this.x = -50; //Updated enemy's position
+            this.y = getRandomItem(enemyPosY); //Updated enemy's position
+            this.speed = 200 * Math.random() + 100; // Updated speed of enemy
         }                       
 
         if(Math.abs(this.x-player.x) < 50 && this.y === playerMovePosY[player.row]){
             player.x = getRandomItem(posX);
-            player.row = getRandomItem([4,5]);
+            player.row = getRandomItem([4,5]); // handle collision when enemies hit the player
         }
     }
 
@@ -47,7 +47,7 @@ class Player{
     update(){
         if(playerMovePosY[this.row] === playerMovePosY[0]){
             this.x = getRandomItem(posX);
-            this.row = getRandomItem([4,5]);
+            this.row = getRandomItem([4,5]); //Updated player's position when player reached the reiver
         }
 
     }
